@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 2020
+                    Laravel 2020 Alsu
                 </div>
 
                 <div class="links">
