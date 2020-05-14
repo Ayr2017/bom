@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel 202
+                    Laravel 2020
                 </div>
 
                 <div class="links">
