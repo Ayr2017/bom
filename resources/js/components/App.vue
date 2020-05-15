@@ -1,11 +1,35 @@
 <template>
-   <router-view></router-view>
+  <v-app>
+    
+    <Header/>
+
+    <v-navigation-drawer app>
+    </v-navigation-drawer>
+
+    <!-- <v-app-bar app >
+    </v-app-bar> -->
+
+    <!-- Sizes your content based upon application components -->
+    <v-content>
+      <!-- Provides the application the proper gutter -->
+      <v-container fluid>
+        <!-- If using vue-router -->
+        <router-view></router-view>
+      </v-container>
+    </v-content>
+
+    <v-footer app>
+      <!-- -->
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component App mounted.')
-        }
-    }
+import Header from "./bars/Header.vue";
+export default {
+  components: {Header},
+  mounted() {
+    console.log("Component App mounted.");
+  }
+};
 </script>
