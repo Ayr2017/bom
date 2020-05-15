@@ -1,29 +1,19 @@
 <template>
-    <div class="container">
-       <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel 2020 Alsu
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
+  <v-app>
+    <div class="my-2">
+      <v-btn text small>Normal</v-btn>
     </div>
+    <div class="my-2">
+      <v-btn color="error" small>Success</v-btn>
+    </div>
+  </v-app>
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component Users mounted.')
-        }
-    }
+import axios from "axios";
+export default {
+  mounted() {
+    console.log("Component Users mounted.");
+  }
+};
 </script>
