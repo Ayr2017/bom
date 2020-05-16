@@ -10,6 +10,7 @@ import VueRouter from 'vue-router';
 import vuetify from './vuetify';
 import router from './router';
 import App from './components/App';
+import store from './store'
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,8 +35,9 @@ import App from './components/App';
  Vue.use(VueRouter);
 
 const app = new Vue({
-    el: '#app',
+    // el: '#app',
     render : h=> h(App),
     router,
     vuetify,
-});
+    store,
+}).$mount('#app');

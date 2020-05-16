@@ -1,0 +1,24 @@
+// import axios from 'axios';
+export default {
+    state: {
+        posts: []
+    },
+    getters: {
+        allPosts(state) {
+            return state.posts;
+        }
+    },
+    mutations: {
+        updatePosts(state, posts) {
+            state.posts = posts;
+        }
+    },
+    actions: {
+        async fetchPosts(ctx, limit =3) {
+            console.log("Component Users mounted.");
+            const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
+            const posts = await res.json();
+            ctx.commit('updatePosts', posts);
+        }
+    }
+}
