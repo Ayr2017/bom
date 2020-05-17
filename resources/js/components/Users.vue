@@ -5,8 +5,9 @@
 
       <v-text-field  label="E-mail" required></v-text-field>
 
-      <v-btn color="default" @click="console.log(1)">Reset Validation</v-btn>
+      <v-btn color="default" @click="showRoute()">Reset Validation</v-btn>
     </v-form>
+    <router-link to="/">HOME</router-link>
 
     <v-card class="mx-auto" max-width="344" outlined v-for="post in allPosts" :key="post.id">
       <v-list-item three-line>
@@ -39,7 +40,10 @@ export default {
   },
   
   methods: {
-    ...mapActions(['fetchPosts'])
+    ...mapActions(['fetchPosts']),
+    showRoute(){
+      console.log(this.$router)
+    }
   }
 };
 </script>

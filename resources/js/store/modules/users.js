@@ -15,7 +15,6 @@ export default {
     },
     actions: {
         async fetchPosts(ctx, limit =3) {
-            console.log("Component Users mounted.");
             const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}`);
             const posts = await res.json();
             ctx.commit('updatePosts', posts);
