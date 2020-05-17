@@ -4296,9 +4296,9 @@ var render = function() {
       _vm._v(" "),
       _c("v-content", [_c("router-view")], 1),
       _vm._v(" "),
-      _c("v-footer", { attrs: { app: "" } }, [
-        _c("span", [_vm._v("© " + _vm._s(_vm.currentYear))])
-      ])
+      _vm.currentPage
+        ? _c("v-footer", [_c("span", [_vm._v("© " + _vm._s(_vm.currentYear))])])
+        : _vm._e()
     ],
     1
   )
@@ -4471,7 +4471,7 @@ var render = function() {
                               "text-shadow": "2px 2px 2px #aaaaaa66"
                             }
                           },
-                          [_vm._v("Best service every day")]
+                          [_vm._v("Test service every day")]
                         ),
                         _vm._v(" "),
                         _c(

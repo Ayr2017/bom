@@ -15,7 +15,7 @@
         <router-view></router-view>
     </v-content>
 
-    <v-footer app>
+    <v-footer v-if="currentPage">
       <span>&copy; {{currentYear}}</span>
     </v-footer>
   </v-app>

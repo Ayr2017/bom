@@ -9,7 +9,7 @@
               <p
                 class="font-weight-thin display-4 indigo--text text--lighten-5 text-center"
                 style="text-shadow:2px 2px 2px #aaaaaa66"
-              >Best service every day</p>
+              >Test service every day</p>
               <v-row justify="center">
               <v-flex xs12 md4 lg4 class="ma-5">
                  <v-btn block color="#2196F3" class="white--text"  @click="show = true">Войти</v-btn>
