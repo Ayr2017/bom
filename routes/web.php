@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'TemplateController@app');
+Route::get('/login', 'TemplateController@app');
 
-Route::get('/{any}',function(){
-    return view('welcome');
-});
