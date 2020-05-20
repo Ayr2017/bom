@@ -1,7 +1,6 @@
 <template>
   <v-card height="100%" style="border-radius:0" class="d-flex pa-0">
     <v-img :src="mayak" :aspect-ratio="16/5">
-      <!-- <v-img src="https://picsum.photos/1510/1300?random" aspect-ratio="1.7"> -->
       <template>
         <v-row class="fill-height ma-0" align="stretch" justify="center">
           <v-layout key="1" justify-center align-center>

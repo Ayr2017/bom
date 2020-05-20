@@ -28,10 +28,11 @@ import Header from "./bars/Header.vue";
 import Drawer from "./bars/Drawer.vue";
 import EmptyLayout from "./layouts/EmptyLayout";
 import MainLayout from "./layouts/MainLayout";
+import RegistrationLayout from "./layouts/RegistrationLayout";
 
 import { mapState, mapGetters, mapActions } from "vuex";
 export default {
-  components: { Header, Drawer, EmptyLayout, MainLayout },
+  components: { Header, Drawer, EmptyLayout, MainLayout, RegistrationLayout },
   data: () => ({
     currentYear: new Date().getFullYear()
   }),

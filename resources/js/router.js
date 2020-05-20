@@ -2,7 +2,7 @@ import  VueRouter  from "vue-router";
 import Users from './components/Users';
 import Welcome from './components/Welcome';
 import Login from './components/Login';
-import RegistrationGeneral from './components/RegistrationGeneral';
+import Registration from './components/Registration';
 import RegistrationClient from './components/RegistrationClient';
 
 export default new VueRouter({
@@ -19,13 +19,13 @@ export default new VueRouter({
         {
             path:'/login',
             name:'login',
-            meta:{layout:'empty'},
+            meta:{layout:'registration'},
             component: ()=>import('./components/Login.vue'),
         },
         {
             path:'/registration',
             name: 'registration',
-            meta:{layout:'main'},
+            meta:{layout:'registration'},
             component: ()=>import('./components/Registration.vue'),
         },
         {
