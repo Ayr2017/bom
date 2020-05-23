@@ -2164,7 +2164,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    height: function height() {
+      console.log(this.$vuetify.breakpoint);
+      return this.$vuetify.breakpoint.xs ? "100vh" : "40vh";
+    }
+  }
+});
 
 /***/ }),
 
@@ -2516,6 +2553,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4689,7 +4731,104 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h2", [_vm._v("RG")])
+  return _c(
+    "v-col",
+    {
+      staticClass: "pa-0",
+      staticStyle: { "min-height": "90vh", "justify-content": "center" }
+    },
+    [
+      _c(
+        "v-card",
+        {
+          staticClass: "mx-auto my-md-12 my-lg-12 my-sm-12",
+          attrs: {
+            color: "#26c6da",
+            dark: "",
+            "max-width": "600",
+            width: "100%",
+            "min-height": _vm.height
+          }
+        },
+        [
+          _c(
+            "v-card-title",
+            { attrs: { align: "center" } },
+            [
+              _c("v-icon", { attrs: { large: "", left: "" } }, [
+                _vm._v("mdi-twitter")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "title font-weight-light" }, [
+                _vm._v("Logotype")
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-card-text",
+            [
+              _c(
+                "v-col",
+                {
+                  staticClass: "px-auto pr-8",
+                  attrs: { cols: "12", sm: "12", md: "12" }
+                },
+                [
+                  _c(
+                    "v-row",
+                    { attrs: { align: "center" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "ma-2",
+                          attrs: { block: "", outlined: "", color: "white" }
+                        },
+                        [_c("span", [_vm._v(" как водитель")])]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                {
+                  staticClass: "px-auto pr-8",
+                  attrs: { cols: "12", sm: "12", md: "12" }
+                },
+                [
+                  _c(
+                    "v-row",
+                    { attrs: { align: "center" } },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "ma-2",
+                          attrs: { block: "", outlined: "", color: "white" }
+                        },
+                        [_c("span", [_vm._v(" как клиент")])]
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -5215,7 +5354,31 @@ var render = function() {
               staticClass: "flex-grow-0",
               attrs: { dark: "", color: "#0091EA" }
             },
-            [_c("h1", [_vm._v("Registration layout")])]
+            [
+              _c(
+                "router-link",
+                { attrs: { to: "/", tag: "span" } },
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass: "ma-2 mb-3",
+                      attrs: { tile: "", large: "", color: "white", icon: "" }
+                    },
+                    [
+                      _c("v-icon", { attrs: { large: "" } }, [
+                        _vm._v("mdi-home")
+                      ])
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("h1", { staticClass: "mb-0" }, [_vm._v("Регистрация")])
+            ],
+            1
           )
         ],
         1

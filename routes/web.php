@@ -13,4 +13,5 @@
 
 Route::get('/', 'TemplateController@app');
 Route::get('/login', 'TemplateController@app');
+Route::get('/registration', 'TemplateController@app');
 
