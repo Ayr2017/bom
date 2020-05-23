@@ -2140,7 +2140,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({});
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  computed: {
+    height: function height() {
+      console.log(this.$vuetify.breakpoint);
+      return this.$vuetify.breakpoint.xs ? '100vh' : '10vh';
+    }
+  }
+});
 
 /***/ }),
 
@@ -2508,13 +2516,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -4494,160 +4495,167 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-card",
+    "v-col",
     {
-      staticClass: "mx-auto fill-height",
-      attrs: { color: "#26c6da", dark: "", "max-width": "600", width: "100%" }
+      staticClass: "pa-0",
+      staticStyle: { "min-height": "90vh", "justify-content": "center" }
     },
     [
       _c(
-        "v-card-title",
-        [
-          _c("v-icon", { attrs: { large: "", left: "" } }, [
-            _vm._v("mdi-twitter")
-          ]),
-          _vm._v(" "),
-          _c("span", { staticClass: "title font-weight-light" }, [
-            _vm._v("Logotype")
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-card-text",
-        { staticClass: "headline font-weight-bold" },
+        "v-card",
+        {
+          staticClass: "mx-auto my-md-12 my-lg-12 my-sm-12",
+          attrs: {
+            color: "#26c6da",
+            dark: "",
+            "max-width": "600",
+            width: "100%",
+            "min-height": _vm.height
+          }
+        },
         [
           _c(
-            "v-col",
-            { attrs: { cols: "12", sm: "12", md: "12" } },
+            "v-card-title",
             [
-              _c("v-text-field", {
-                attrs: {
-                  label: "E-mail",
-                  placeholder: "email@domain.com",
-                  outlined: ""
-                }
-              })
+              _c("v-icon", { attrs: { large: "", left: "" } }, [
+                _vm._v("mdi-twitter")
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "title font-weight-light" }, [
+                _vm._v("Logotype")
+              ])
             ],
             1
           ),
           _vm._v(" "),
           _c(
-            "v-col",
-            { attrs: { cols: "12", sm: "12", md: "12" } },
+            "v-card-text",
+            { staticClass: "headline font-weight-bold" },
             [
-              _c("v-text-field", {
-                attrs: {
-                  label: "Пароль",
-                  placeholder: "X@as12$oT!",
-                  outlined: ""
-                }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-card-text",
-        { staticClass: "headline font-weight-bold pt-0 pb-0" },
-        [
-          _c(
-            "v-container",
-            { staticClass: "pt-0 pb-0 " },
-            [
-              _c("v-checkbox", {
-                staticClass: "mt-0",
-                attrs: {
-                  label: "Запомнить меня",
-                  color: "white",
-                  value: "error",
-                  "hide-details": "",
-                  dark: ""
-                },
-                model: {
-                  value: _vm.ex4,
-                  callback: function($$v) {
-                    _vm.ex4 = $$v
-                  },
-                  expression: "ex4"
-                }
-              })
-            ],
-            1
-          )
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "v-card-text",
-        { staticClass: "headline font-weight-bold" },
-        [
-          _c(
-            "v-card-actions",
-            { staticClass: "justify-between" },
-            [
-              _c("v-btn", { attrs: { outlined: "", color: "white" } }, [
-                _vm._v("Отмена")
-              ]),
-              _vm._v(" "),
-              _c("v-spacer"),
-              _vm._v(" "),
               _c(
-                "v-slide-x-reverse-transition",
+                "v-col",
+                { attrs: { cols: "12", sm: "12", md: "12" } },
                 [
-                  true
-                    ? _c(
-                        "v-tooltip",
-                        {
-                          attrs: { left: "" },
-                          scopedSlots: _vm._u(
-                            [
-                              {
-                                key: "activator",
-                                fn: function(ref) {
-                                  var on = ref.on
-                                  return [
-                                    _c(
-                                      "v-btn",
-                                      _vm._g(
-                                        {
-                                          staticClass: "my-0",
-                                          attrs: { icon: "" },
-                                          on: { click: _vm.resetForm }
-                                        },
-                                        on
-                                      ),
-                                      [_c("v-icon", [_vm._v("mdi-refresh")])],
-                                      1
-                                    )
-                                  ]
-                                }
-                              }
-                            ],
-                            null,
-                            false,
-                            2723666325
-                          )
-                        },
-                        [_vm._v(" "), _c("span", [_vm._v("Refresh form")])]
-                      )
-                    : undefined
+                  _c("v-text-field", {
+                    attrs: {
+                      label: "E-mail",
+                      placeholder: "email@domain.com",
+                      outlined: ""
+                    }
+                  })
                 ],
                 1
               ),
               _vm._v(" "),
               _c(
-                "v-btn",
-                {
-                  attrs: { outlined: "", color: "white" },
-                  on: { click: _vm.submit }
-                },
-                [_vm._v("Войти")]
+                "v-col",
+                { attrs: { cols: "12", sm: "12", md: "12" } },
+                [
+                  _c("v-text-field", {
+                    attrs: {
+                      label: "Пароль",
+                      placeholder: "X@as12$oT!",
+                      outlined: ""
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-card-text",
+            { staticClass: "headline font-weight-bold pt-0 pb-0" },
+            [
+              _c(
+                "v-container",
+                { staticClass: "pt-0 pb-0 " },
+                [
+                  _c("v-checkbox", {
+                    staticClass: "mt-0",
+                    attrs: {
+                      label: "Запомнить меня",
+                      color: "white",
+                      value: "error",
+                      "hide-details": "",
+                      dark: ""
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "v-card-text",
+            { staticClass: "headline font-weight-bold" },
+            [
+              _c(
+                "v-card-actions",
+                { staticClass: "justify-between" },
+                [
+                  _c("v-btn", { attrs: { outlined: "", color: "white" } }, [
+                    _vm._v("Отмена")
+                  ]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-slide-x-reverse-transition",
+                    [
+                      true
+                        ? _c(
+                            "v-tooltip",
+                            {
+                              attrs: { left: "" },
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "activator",
+                                    fn: function(ref) {
+                                      var on = ref.on
+                                      return [
+                                        _c(
+                                          "v-btn",
+                                          _vm._g(
+                                            {
+                                              staticClass: "my-0",
+                                              attrs: { icon: "" }
+                                            },
+                                            on
+                                          ),
+                                          [
+                                            _c("v-icon", [
+                                              _vm._v("mdi-refresh")
+                                            ])
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    }
+                                  }
+                                ],
+                                null,
+                                false,
+                                1671002099
+                              )
+                            },
+                            [_vm._v(" "), _c("span", [_vm._v("Refresh form")])]
+                          )
+                        : undefined
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-btn", { attrs: { outlined: "", color: "white" } }, [
+                    _vm._v("Войти")
+                  ])
+                ],
+                1
               )
             ],
             1
@@ -5188,40 +5196,32 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-container",
-    { staticClass: "pa-0 align-stretch fill-height-md", attrs: { fluid: "" } },
+    "div",
+    {
+      staticStyle: {
+        "min-height": "100vh",
+        display: "flex",
+        "flex-direction": "column"
+      }
+    },
     [
       _c(
-        "v-row",
-        {
-          staticClass: "pa-0 ma-0 fill-height",
-          attrs: { "align-content-md": "stretch" }
-        },
+        "div",
+        {},
         [
           _c(
-            "v-col",
-            { staticClass: "ma-0 pa-0" },
-            [
-              _c("v-app-bar", { attrs: { dark: "", color: "#0091EA" } }, [
-                _c("h1", [_vm._v("Registration layout")])
-              ]),
-              _vm._v(" "),
-              _c(
-                "v-row",
-                {
-                  staticClass:
-                    "fill-height align-md-center align-xs-stretch align-sm-center",
-                  attrs: { "no-gutters": "" }
-                },
-                [_c("router-view")],
-                1
-              )
-            ],
-            1
+            "v-app-bar",
+            {
+              staticClass: "flex-grow-0",
+              attrs: { dark: "", color: "#0091EA" }
+            },
+            [_c("h1", [_vm._v("Registration layout")])]
           )
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("router-view")
     ],
     1
   )

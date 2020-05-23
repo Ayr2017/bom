@@ -1,5 +1,6 @@
 <template>
-  <v-card class="mx-auto fill-height" color="#26c6da" dark max-width="600" width="100%">
+<v-col class="pa-0" style="min-height:90vh; justify-content:center">
+  <v-card class="mx-auto my-md-12 my-lg-12 my-sm-12" color="#26c6da" dark max-width="600" width="100%" :min-height="height">
     <v-card-title>
       <v-icon large left>mdi-twitter</v-icon>
       <span class="title font-weight-light">Logotype</span>
@@ -16,7 +17,6 @@
     <v-card-text class="headline font-weight-bold pt-0 pb-0">
       <v-container class="pt-0 pb-0 ">
       <v-checkbox
-              v-model="ex4"
               label="Запомнить меня"
               color="white"
               value="error"
@@ -33,18 +33,26 @@
         <v-slide-x-reverse-transition>
           <v-tooltip v-if="true" left>
             <template v-slot:activator="{ on }">
-              <v-btn icon class="my-0" @click="resetForm" v-on="on">
+              <v-btn icon class="my-0" v-on="on">
                 <v-icon>mdi-refresh</v-icon>
               </v-btn>
             </template>
             <span>Refresh form</span>
           </v-tooltip>
         </v-slide-x-reverse-transition>
-        <v-btn outlined color="white" @click="submit">Войти</v-btn>
+        <v-btn outlined color="white" >Войти</v-btn>
       </v-card-actions>
     </v-card-text>
   </v-card>
+  </v-col>
 </template>
 <script>
-export default {};
+export default {
+  computed:{
+    height(){
+      console.log(this.$vuetify.breakpoint)
+      return this.$vuetify.breakpoint.xs ? '100vh': '10vh';
+    }
+  }
+};
 </script>
