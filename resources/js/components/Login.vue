@@ -50,7 +50,6 @@
 export default {
   computed:{
     height(){
-      console.log(this.$vuetify.breakpoint)
       return this.$vuetify.breakpoint.xs ? '100vh': '10vh';
     }
   }
